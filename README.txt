@@ -1,172 +1,194 @@
-# Инструкция по установке и запуску Telegram-бота с цитатами
+💬 Random Quote Telegram Bot
 
-Эта инструкция поможет вам установить и запустить Telegram-бота для отправки случайных цитат. Инструкции приведены для операционных систем Windows и Linux.
+Looking for a daily dose of inspiration, wisdom, or humor? This bot sends you random quotes, perfect for brightening your day or sparking new thoughts!
+With this bot, you can receive a random quote anytime you need it, whether for motivation, reflection, or just a good laugh.
 
-## Подготовка: Получение токена бота
+✅ What does it do?
 
-Прежде чем начать, вам нужно создать бота в Telegram и получить его токен:
+ • ✨ Sends random quotes on demand
+ • 💡 Offers a variety of quote categories, including motivational, philosophical, funny, and more
+ • 🌱 Provides a daily quote feature for daily inspiration
+ • 📲 Easy-to-use interface to receive quotes directly on Telegram
 
-1. Откройте Telegram и найдите бота @BotFather
-2. Отправьте ему команду `/newbot`
-3. Следуйте инструкциям: введите имя бота и его username (должен заканчиваться на "bot")
-4. После создания бота, BotFather отправит вам сообщение с токеном бота. Он выглядит примерно так: `1234567890:ABCDefGhIJKlmnOPQRstUVwxyZ`
-5. Скопируйте этот токен, он понадобится позже
+🔧 Features
 
-## Установка и запуск на Windows
+✅ Quick and effortless access to a wide range of quotes
+✅ Customizable settings for the types of quotes you’d like to receive
+✅ Instant delivery of quotes to keep you inspired
 
-### Шаг 1: Установка Python 3.10 (не самая последняя версия для лучшей совместимости)
+📩 Need some inspiration or a quick boost?
 
-1. Перейдите на официальный сайт Python: https://www.python.org/downloads/release/python-3106/
-2. Прокрутите страницу вниз и найдите раздел "Files"
-3. Скачайте "Windows installer (64-bit)" или "Windows installer (32-bit)" в зависимости от вашей системы (в большинстве случаев подойдет 64-bit)
-4. Запустите установщик
-5. **Важно!** Поставьте галочку "Add Python 3.10 to PATH" в начале установки
-6. Нажмите "Install Now" (или "Установить сейчас")
-7. Дождитесь завершения установки и нажмите "Close" (или "Закрыть")
+Contact me on Telegram, and I’ll set up this bot to deliver your favorite quotes whenever you need them! 🚀
 
-### Шаг 2: Скачивание и подготовка бота
+# Instructions for installing and launching a Telegram bot with quotes
 
-1. Создайте на компьютере новую папку, например, "telegram_bot"
-2. Скопируйте файл с кодом бота (main.py) в эту папку
+This guide will help you install and run a Telegram bot to send random quotes. The instructions are provided for Windows and Linux operating systems.
 
-### Шаг 3: Установка необходимых библиотек
+## Preparation: Getting a bot token
 
-1. Нажмите клавиши Win + R, введите "cmd" и нажмите Enter для открытия командной строки
-2. С помощью команды `cd` перейдите в папку с ботом, например:
+Before you start, you need to create a bot in Telegram and receive its token.:
+
+1. Open Telegram and find the bot @BotFather
+2. Send him the command `/newbot`
+3. Follow the instructions: enter the name of the bot and its username (must end with "bot")
+4. After creating the bot, BotFather will send you a message with the bot token. It looks something like this: `1234567890:ABCDefGhIJKlmnOPQRstUVwxyZ`
+5. Copy this token, you will need it later
+
+## Install and run on Windows
+
+### Step 1: Install Python 3.10 (not the latest version for better compatibility)
+
+1. Go to the official Python website: https://www.python.org/downloads/release/python-3106/
+2. Scroll down the page and find the "Files" section
+3. Download "Windows installer (64-bit)" or "Windows installer (32-bit)" depending on your system (64-bit is suitable in most cases)
+4. Run the installer
+5. **Important!** Check the box "Add Python 3.10 to PATH" at the beginning of the installation
+6. Click "Install Now" (or "Install Now")
+7. Wait for the installation to complete and click "Close" (or "Close")
+
+### Step 2: Download and prepare the bot
+
+1. Create a new folder on your computer, for example, "telegram_bot"
+2. Copy the file with the bot code (main.py ) to this folder
+
+### Step 3: Install the necessary libraries
+
+1. Press the Win + R keys, type "cmd" and press Enter to open the command prompt
+2. Use the 'cd` command to navigate to the folder with the bot, for example:
    ```
    cd C:\Users\ИмяПользователя\Documents\telegram_bot
    ```
-3. Установите библиотеку aiogram командой:
+3. Install the aiogram library with the command:
    ```
    pip install aiogram==3.0.0 aiohttp
    ```
 
-### Шаг 4: Настройка токена
+### Step 4: Setting up the Token
 
-1. Откройте файл main.py в любом текстовом редакторе (можно в блокноте, нажав на файл правой кнопкой мыши и выбрав "Открыть с помощью" -> "Блокнот")
-2. Найдите строку `API_TOKEN = 'YOUR_BOT_TOKEN'`
-3. Замените 'YOUR_BOT_TOKEN' на токен, который вы получили от BotFather (не удаляйте одинарные кавычки)
-4. Сохраните файл (Ctrl+S)
+1. Open the main file.py in any text editor (you can use Notepad by right-clicking on the file and selecting "Open with" -> "Notepad")
+2. Find the string `API_TOKEN = 'YOUR_BOT_TOKEN'
+3. Replace 'YOUR_BOT_TOKEN' with the token you received from BotFather (do not remove the single quotes)
+4. Save the file (Ctrl+S)
 
-### Шаг 5: Запуск бота
+### Step 5: Launch the Bot
 
-1. В командной строке, находясь в папке с ботом, введите команду:
-   ```
+1. At the command prompt, while in the folder with the bot, type the command:
+``
    python main.py
    ```
-2. Вы должны увидеть сообщение "Бот запущен" или другие логи
-3. Теперь бот работает! Найдите его в Telegram по имени, которое вы задали при создании, и начните общение
+2. You should see the message "Bot is running" or other logs.
+3. Now the bot is working! Find it in Telegram by the name you set when creating it, and start chatting.
 
-## Установка и запуск на Linux
+## Install and run on Linux
 
-### Шаг 1: Установка Python 3.10
+### Step 1: Install Python 3.10
 
-1. Откройте терминал (Ctrl+Alt+T в большинстве Linux-систем)
-2. Обновите список пакетов:
+1. Open a terminal (Ctrl+Alt+T on most Linux systems)
+2. Update the package list:
    ```
    sudo apt update
    ```
-3. Установите необходимые инструменты для добавления репозитория:
+3. Install the necessary tools to add the repository.:
    ```
    sudo apt install software-properties-common
    ```
-4. Добавьте репозиторий с Python:
+4. Add a repository with Python:
    ```
    sudo add-apt-repository ppa:deadsnakes/ppa
    ```
-5. Обновите список пакетов снова:
+5. Update the package list again:
    ```
    sudo apt update
    ```
-6. Установите Python 3.10:
-   ```
+6. Install Python 3.10:
+``
    sudo apt install python3.10 python3.10-venv python3-pip
    ```
 
-### Шаг 2: Создание и настройка окружения для бота
+### Step 2: Create and configure the environment for the bot
 
-1. Создайте папку для бота:
+1. Create a folder for the bot:
    ```
    mkdir ~/telegram_bot
    cd ~/telegram_bot
    ```
-2. Создайте виртуальное окружение:
+2. Create a virtual environment:
    ```
    python3.10 -m venv venv
    ```
-3. Активируйте виртуальное окружение:
+3. Activate the virtual environment:
    ```
    source venv/bin/activate
    ```
-4. Создайте файл с кодом:
-   ```
+4. Create a file with the code:
+``
    nano main.py
-   ```
-5. Скопируйте код бота в открывшийся редактор
-6. Нажмите Ctrl+O для сохранения, затем Enter и Ctrl+X для выхода из редактора
+``
+5. Copy the bot code into the editor that opens
+6. Press Ctrl+O to save, then Enter and Ctrl+X to exit the editor.
 
-### Шаг 3: Установка необходимых библиотек
+### Step 3: Install the necessary libraries
 
-1. В терминале с активированным виртуальным окружением выполните:
+1. In the terminal with the activated virtual environment, run:
    ```
    pip install aiogram==3.0.0 aiohttp
    ```
 
-### Шаг 4: Настройка токена
+### Step 4: Setting up the Token
 
-1. Откройте файл с кодом бота:
+1. Open the file with the bot code:
    ```
    nano main.py
    ```
-2. Найдите строку `API_TOKEN = 'YOUR_BOT_TOKEN'`
-3. Замените 'YOUR_BOT_TOKEN' на токен, который вы получили от BotFather (не удаляйте одинарные кавычки)
-4. Сохраните файл (Ctrl+O, затем Enter) и выйдите из редактора (Ctrl+X)
+2. Find the string `API_TOKEN = 'YOUR_BOT_TOKEN'
+3. Replace 'YOUR_BOT_TOKEN' with the token you received from BotFather (do not remove the single quotes)
+4. Save the file (Ctrl+O, then Enter) and exit the editor (Ctrl+X)
 
-### Шаг 5: Запуск бота
+### Step 5: Launch the Bot
 
-1. Убедитесь, что вы находитесь в папке с ботом и виртуальное окружение активировано (в начале строки терминала должно быть написано "(venv)")
-2. Запустите бота:
+1. Make sure that you are in the folder with the bot and the virtual environment is activated ("(venv)" should be written at the beginning of the terminal line)
+2. Launch the bot:
    ```
    python main.py
    ```
-3. Вы должны увидеть сообщение "Бот запущен" или другие логи
-4. Теперь бот работает! Найдите его в Telegram по имени, которое вы задали при создании, и начните общение
+3. You should see the message "The bot is running" or other logs.
+4. Now the bot is working! Find it in Telegram by the name you set when creating it, and start chatting.
 
-## Как пользоваться ботом
+## How to use the bot
 
-После запуска бота вы можете использовать следующие команды в Telegram:
+After launching the bot, you can use the following commands in Telegram:
 
-- `/start` - получить приветственное сообщение и список команд
-- `/quote` - получить случайную цитату
-- `/author` - выбрать автора цитаты (бот попросит ввести имя автора)
-- `/refresh` - обновить базу данных цитат (получить новые цитаты из API)
-- `/cancel` или просто "отмена" - отменить текущую операцию
+- `/start` - get a welcome message and a list of commands
+- `/quote` - get a random quote
+- `/author` - select the author of the quote (the bot will ask you to enter the author's name)
+- `/refresh` - update the quote database (get new quotes from the API)
+- `/cancel` or simply "cancel" - cancel the current operation
 
-## Устранение проблем
+## Troubleshooting
 
-### Бот не запускается на Windows
-- Убедитесь, что вы установили Python с галочкой "Add Python to PATH"
-- Попробуйте перезапустить компьютер и повторить все шаги
-- Убедитесь, что вы правильно ввели команды в командной строке
+### The bot does not run on Windows
+- Make sure you have installed Python with the "Add Python to PATH" checkbox
+- Try restarting your computer and repeat all the steps
+- Make sure that you have entered the correct commands in the command prompt
 
-### Бот не запускается на Linux
-- Убедитесь, что виртуальное окружение активировано
-- Проверьте, правильно ли установлены все библиотеки
-- Проверьте наличие прав на запуск файла: `chmod +x main.py`
+### The bot does not run on Linux
+- Make sure that the virtual environment is activated
+- Check if all libraries are installed correctly.
+- Check the permissions to run the file: `chmod +x main.py `
 
-### Бот запускается, но не отвечает в Telegram
-- Проверьте, правильно ли вы ввели токен от BotFather
-- Убедитесь, что бот запущен и работает (в командной строке или терминале должны быть видны логи)
-- Попробуйте перезапустить бота
+### The bot starts, but does not respond in Telegram
+- Check if you entered the BotFather token correctly.
+- Make sure that the bot is up and running (logs should be visible on the command line or terminal)
+- Try restarting the bot
 
-### Ошибка "No module named 'aiogram'"
-- Убедитесь, что вы установили все необходимые библиотеки командой:
-  ```
+### Error "No module named 'aiogram'"
+- Make sure that you have installed all the necessary libraries with the command:
+``
   pip install aiogram==3.0.0 aiohttp
   ```
 
-## Дополнительная информация
+## Additional information
 
-- Бот сохраняет все цитаты в файл базы данных quotes.db
-- При первом запуске бот создает базу данных с несколькими цитатами
-- Вы можете добавить новые цитаты с помощью команды `/refresh`
+- The bot saves all the quotes to the quotes.db database file
+- At the first launch, the bot creates a database with several quotes
+- You can add new quotes using the `/refresh` command
